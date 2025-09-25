@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.Scanner;
 
 interface Volume {
@@ -39,20 +40,52 @@ class Sphere implements Volume {
     v = (4.0 / 3.0 )*pi * Math.pow(r , 3);
     System.out.println("Volume of sphere = " + v);
 
-  }
+  }  
 }
 
 public class Mvolume {
+
   public static void main(String[] args) {
-    Cylinder cylinder = new Cylinder();
+        Scanner scanner = new Scanner(System.in);
+        int choice;
+          Cylinder cylinder = new Cylinder();
     Sphere sphere = new Sphere();
 
-    cylinder.readData();
-    cylinder.dispvolume();
 
-    sphere.readData();
-    sphere.dispvolume();
+        while (true) {
+            System.out.println("\nChoose a shape to calculate volume:");
+            System.out.println("1. Cylinder");
+            System.out.println("2. Sphere");
+            System.out.println("3. Exit");
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
 
-  }
+            switch (choice) {
+                case 1:
+                     cylinder.readData();
+                     cylinder.dispvolume();
+                    break;
+
+                
+                
+                case 2:
+                     sphere.readData();
+                     sphere.dispvolume();
+                    
+                    break;
+
+                case 3:
+                    System.out.println("Exiting...");
+                    System.exit(0);
+                    break;
+
+                default:
+                    System.out.println("Try again");
+            }
+
+        } 
+
+        
+    }
 
 }
