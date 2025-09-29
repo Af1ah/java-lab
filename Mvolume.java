@@ -37,55 +37,51 @@ class Sphere implements Volume {
   }
 
   public void dispvolume() {
-    v = (4.0 / 3.0 )*pi * Math.pow(r , 3);
+    v = (4.0 / 3.0) * pi * Math.pow(r, 3);
     System.out.println("Volume of sphere = " + v);
 
-  }  
+  }
 }
 
 public class Mvolume {
 
-  public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int choice;
-          Cylinder cylinder = new Cylinder();
+  public static void main(String[] args) {      
+    Scanner scanner = new Scanner(System.in);
+    int choice;
+    Cylinder cylinder = new Cylinder();
     Sphere sphere = new Sphere();
 
+    while (true) {
+      System.out.println("\nChoose a shape to calculate volume:");
+      System.out.println("1. Cylinder");
+      System.out.println("2. Sphere");
+      System.out.println("3. Exit");
+      System.out.print("Enter your choice: ");
+      choice = scanner.nextInt();
 
-        while (true) {
-            System.out.println("\nChoose a shape to calculate volume:");
-            System.out.println("1. Cylinder");
-            System.out.println("2. Sphere");
-            System.out.println("3. Exit");
-            System.out.print("Enter your choice: ");
-            choice = scanner.nextInt();
+      switch (choice) {
+        case 1:
+          cylinder.readData();
+          cylinder.dispvolume();
+          break;
 
-            switch (choice) {
-                case 1:
-                     cylinder.readData();
-                     cylinder.dispvolume();
-                    break;
+        case 2:
+          sphere.readData();
+          sphere.dispvolume();
 
-                
-                
-                case 2:
-                     sphere.readData();
-                     sphere.dispvolume();
-                    
-                    break;
+          break;
 
-                case 3:
-                    System.out.println("Exiting...");
-                    System.exit(0);
-                    break;
+        case 3:
+          System.out.println("Exiting...");
+          System.exit(0);
+          break;
 
-                default:
-                    System.out.println("Try again");
-            }
+        default:
+          System.out.println("Try again");
+      }
 
-        } 
-
-        
     }
+
+  }
 
 }

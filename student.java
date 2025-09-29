@@ -1,0 +1,34 @@
+public class student {
+    public static void main(String args[]){
+        Details s1=new Details("shehna",1,32,65,87);
+        s1.percentage();
+        s1.printDetails();
+    }
+}
+class Details{
+    String name;
+    int rollno;
+    float mark1,mark2,mark3,p;
+    Details(String n,int r,float m1,float m2,float m3)
+    {
+        name=n;
+        rollno=r;
+        mark1=m1;
+        mark2=m2;
+        mark3=m3;
+    }
+    void percentage(){
+        p=((mark1+mark2+mark3)/300)*100;
+    }
+    void printDetails()
+    {
+        System.out.println("rollno:"+rollno);
+        System.out.println("name:"+name);
+        System.out.println("mark1:"+mark1);
+        System.out.println("mark2:"+mark2);
+        System.out.println("mark3:"+mark3);
+        System.out.println("percentage:"+p+"%");
+        System.out.println("...............");
+    }
+}
+
