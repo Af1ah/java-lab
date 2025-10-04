@@ -1,3 +1,6 @@
+//6. Java Programming Code to Find HCF LCM of Two Numbers
+
+
 import java.util.Scanner;
 
 public class HCF_LCM {

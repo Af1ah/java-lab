@@ -1,3 +1,6 @@
+/*11.Create a class Student to read and display the student details. Create another class
+mark inherit from student to read marks of 5 subjects and find total and average.
+Write a Java program to display the result of a student.  */
 public class student {
     public static void main(String args[]){
         Details s1=new Details("shehna",1,32,65,87);
