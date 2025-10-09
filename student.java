@@ -1,37 +1,62 @@
 /*11.Create a class Student to read and display the student details. Create another class
 mark inherit from student to read marks of 5 subjects and find total and average.
 Write a Java program to display the result of a student.  */
-public class student {
-    public static void main(String args[]){
-        Details s1=new Details("shehna",1,32,65,87);
-        s1.percentage();
-        s1.printDetails();
-    }
-}
-class Details{
+
+import java.util.Scanner;
+
+class Student {
     String name;
-    int rollno;
-    float mark1,mark2,mark3,p;
-    Details(String n,int r,float m1,float m2,float m3)
-    {
-        name=n;
-        rollno=r;
-        mark1=m1;
-        mark2=m2;
-        mark3=m3;
+    int roll;
+    String course;
+    Scanner sc = new Scanner(System.in);
+
+    void readStudent() {
+        System.out.print("Enter name: ");
+        name = sc.nextLine();
+        System.out.print("Enter roll number: ");
+        roll = sc.nextInt();
+        sc.nextLine();
+        System.out.print("Enter course: ");
+        course = sc.nextLine();
     }
-    void percentage(){
-        p=((mark1+mark2+mark3)/300)*100;
-    }
-    void printDetails()
-    {
-        System.out.println("rollno:"+rollno);
-        System.out.println("name:"+name);
-        System.out.println("mark1:"+mark1);
-        System.out.println("mark2:"+mark2);
-        System.out.println("mark3:"+mark3);
-        System.out.println("percentage:"+p+"%");
-        System.out.println("...............");
+
+    void showStudent() {
+        System.out.println("Name: " + name);
+        System.out.println("Roll No: " + roll);
+        System.out.println("Course: " + course);
     }
 }
 
+class Mark extends Student {
+    int[] marks = new int[5];
+    int total = 0;
+    float avg;
+
+    void readMarks() {
+        System.out.println("Enter marks of 5 subjects:");
+        for (int i = 0; i < 5; i++) {
+            marks[i] = sc.nextInt();
+            total += marks[i];
+        }
+        avg = total / 5f;
+    }
+
+    void showMarks() {
+        System.out.println("Marks:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Subject " + (i + 1) + ": " + marks[i]);
+        }
+        System.out.println("Total: " + total);
+        System.out.println("Average: " + avg);
+    }
+}
+
+public class student {
+    public static void main(String[] args) {
+        Mark m = new Mark();
+        m.readStudent();
+        m.readMarks();
+        m.showStudent();
+        m.showMarks();
+    }
+}

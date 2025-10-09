@@ -1,6 +1,5 @@
 //14.Write a java program to find the volume of cube, rectangular box, cylinder using function overloading.
 
-import java.io.File;
 import java.util.Scanner;
 
 interface Volume {
@@ -28,7 +27,7 @@ class Cylinder implements Volume {
   }
 }
 
-class Sphere implements Volume {
+class VolumeSphere implements Volume {
   Scanner scanner = new Scanner(System.in);
   double r = 0;
   double v = 0;
@@ -51,7 +50,7 @@ public class Mvolume {
     Scanner scanner = new Scanner(System.in);
     int choice;
     Cylinder cylinder = new Cylinder();
-    Sphere sphere = new Sphere();
+    VolumeSphere sphere = new VolumeSphere();
 
     while (true) {
       System.out.println("\nChoose a shape to calculate volume:");

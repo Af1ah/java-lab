@@ -17,7 +17,7 @@ public class triangle {
                 System.out.println("the triangle is Isosceles");
 
             } else {
-                System.out.println("the triangle is scalen");
+                System.out.println("the triangle is scalene");
 
             }
 
@@ -27,7 +27,7 @@ public class triangle {
             System.out.println("area of triangle = " + area);
         } else {
 
-            System.out.println("invalid trangle");
+            System.out.println("invalid triangle");
             return;
         }
 

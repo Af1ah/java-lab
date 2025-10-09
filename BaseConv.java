@@ -8,8 +8,12 @@ public class BaseConv {
     public static void main(String[] a) {
         java.util.Scanner sc = new java.util.Scanner(System.in);
         while (true) {
-            System.out.println("1) Dec->Bin  2) Dec->Oct  3) Dec->Hex  4) Exit");
-            System.out.print("Choice: ");
+            System.out.println("\nChoose a conversion option:");
+            System.out.println("1. Convert to Binary");
+            System.out.println("2. Convert to Octal");
+            System.out.println("3. Convert to Hexadecimal");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
             int c = sc.nextInt();
             if (c == 4) break;
             System.out.print("Number: ");
@@ -29,6 +33,7 @@ public class BaseConv {
                     break;
             }
             System.out.println();
+            sc.close();
         }
     }
 }
