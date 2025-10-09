@@ -1,4 +1,6 @@
-
+/*9. Write a Java Programming Code to Check given string Anagram or Not. If the two
+strings are anagram to each other, then one string can be rearranged to form the
+other string. For Example: abc and cba are anagram. */
 import java.util.Scanner;
 
 class FindAnagram {
