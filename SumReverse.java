@@ -1,3 +1,4 @@
+//8.write java program to find sum of the digit and reverse of a given number using class and object
 import java.util.Scanner;
 class sumClass{
      void sumDigi(int num){
